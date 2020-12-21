@@ -1,2 +1,3 @@
 # Keyboard-synth
-A responsive keyboard app that uses the tone.js library
+
+A responsive keyboard/synth app that uses the tone.js library
