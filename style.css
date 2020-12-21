@@ -1,0 +1,474 @@
+* {
+	touch-action: manipulation;
+}
+
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+
+/* Keyboard styling*/
+.keyboard-cont{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height: 50%;
+	border-top: 7px solid #535353a4;
+	overflow: hidden;
+	font-size: 0;
+	padding: 0;
+}
+
+.key{
+	font-size: 12px;
+	padding:10px;
+}
+
+.white_key{
+	width: 11.1%;
+	height: 100%;
+	background: rgb(252, 252, 252);
+	border:none;
+	border-right: 3px solid black;
+}
+
+.black_key{
+	border: none;
+	background-color: black;
+	color: white;
+	position: absolute;
+	width: 5%;
+	height: 60%;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.white_key:hover{
+	background: rgb(230, 230, 230);
+}
+
+.white_key.pressed{
+	background: rgb(255, 249, 172);
+}
+
+.black_key:hover{
+	background: rgb(47, 47, 47);
+}
+
+.black_key.pressed{
+	background: rgb(131, 128, 82);
+}
+
+.key:focus {outline:0;}
+
+/* Controls styling */
+.controls-cont{
+	margin: 0;
+	width: 100%;
+	height: 50%;
+	position: relative;
+	background: url(images/bg5.jpg) no-repeat;
+}
+
+.control{
+	background: rgb(27, 27, 27);
+	padding: 3px;
+	border: 2.5px solid rgb(218, 185, 0);
+	border-radius: 5px;
+}
+
+/*instrument controls*/
+.instrument-cont{
+	width: 50%;
+	height: 65%;
+	position: absolute;
+	top: 17.5%; right: 8%;
+}
+
+.btn-cont{
+	height: 80%;
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+}
+
+.synthConverter{
+	border: none;
+	border: 1px solid rgb(170, 170, 170);
+	background: rgb(14, 14, 14);
+	color: rgb(170, 170, 170);
+	margin: 25px;
+	font-size: 15px;
+	height: 50px;
+	width: 100px;
+	border-radius: 5px;
+}
+
+.synthConverter.active{
+	border-color: rgb(255, 90, 90);
+	color: rgb(255, 90, 90);
+	box-shadow: 0px 0px 25px 1px rgb(255, 90, 90, .4),
+		  inset 0px 0px 25px 1px rgb(255, 90, 90, .4);
+}
+
+.synthConverter:focus {outline:0;}
+
+/*slider controls*/
+.slider-cont{
+	width: 26%;
+	height: 65%;
+	top: 30%;
+	position: absolute;
+	top: 17.5%; right: 66.75%;
+	padding: 0;
+}
+
+.sldr-controls{
+	height: 85%;
+	width: 100%;
+	position: absolute;
+	padding:0;
+	bottom: 0;
+}
+
+.slider-setting{
+	display: block;
+	margin: auto;
+	position: relative;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 30px;
+	/* border-top: 1px dotted  rgb(218, 185, 0);
+	border-bottom: 1px dotted  rgb(218, 185, 0); */
+}
+
+.slider{
+	width: 50% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	margin-right: 7.5px !important;
+	margin-left: 7.5px !important;
+}
+
+.slider-text{
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+	position: absolute;
+	right: 35px;
+	line-height: 30px;
+	color: rgb(218, 185, 0);
+	font-size: 14px;
+}
+
+
+/*sampler controls*/
+/*
+.sampler-cont{
+	width: 19%;
+	height: 65%;
+	position: absolute;
+	top: 17.5%; right: 1.5%;
+	padding: 0;
+}
+*/
+/*other controls*/
+.pwr-btn{
+	position: absolute;
+	top: 3%; left: 2%;
+	width: 25px; height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	background: rgb(14, 14, 14,0);
+	border: 2px solid rgb(170, 170, 170);
+	color: rgb(170, 170, 170);
+}
+
+.pwr-btn.on{
+	box-shadow: 0px 0px 15px 2px rgba(255, 90, 90, 0.6),
+		  inset 0px 0px 15px 2px rgb(255, 90, 90, .6);
+	border: 2px solid rgb(255, 90, 90);
+	color: rgb(255, 90, 90);
+}
+
+.title{
+	font-size: 30px;
+	margin: 0;
+	padding-top: 10px;
+	text-align: center;
+	font-family: 'Arizonia', cursive;
+	color: rgb(218, 185, 0);
+}
+
+.cont-header{
+	margin: 0;
+	padding: 0;
+	margin-top:5px;
+	margin-bottom: 3px;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 19px;
+	color: rgb(218, 185, 0);
+}
+
+.fa-github{
+	font-size:30px;
+	color: rgb(218, 185, 0);
+	position: absolute;
+	top: 3%; right: 2%;
+}
+
+@media all and (max-width: 1199px) and (min-width: 988px){ 
+	.synthConverter{
+		margin: 10px;
+	}
+}	
+
+@media all and (max-width: 989px) and (min-width: 571px){
+	.synthConverter{
+		height: 45px;
+		width: 85px;
+		margin: 5px;
+		font-size: 13px;
+	}
+	.cont-header{
+		font-size: 18px;
+	}
+	.slider-text{
+		font-size: 9px;
+	}
+
+	.key{
+		font-size: 0;
+	}
+	.keyboard-cont{
+		height: 40%;
+	}
+	.controls-cont{
+		height: 60%;
+	}
+}
+
+@media all and (max-width: 570px){         /*Mobile vertical*/
+	.synthConverter{
+		height: 35px;
+		width: 70px;
+		margin: 0;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 2.5px;
+		margin-right: 2.5px;
+		font-size: 11px;
+	}
+	.cont-header{
+		font-size: 11px;
+	}
+	.slider-setting{
+		height: 40px;
+	}
+	.slider{
+		display: block !important;;
+		margin: auto !important;;
+		width: 80% !important;;
+		height: 25px !important;;
+	}
+	.slider-text{
+		display: block;
+		position: relative;
+		line-height: normal;
+		height: 15px;
+		font-size: 9px;
+		right: 0;
+	}
+	.key{
+		font-size: 0;
+	}
+	.keyboard-cont{
+		height: 35%;
+	}
+	.controls-cont{
+		height: 65%;
+	}
+	.slider-cont{
+		height: 60%;
+	}
+	.instrument-cont{
+		height: 60%;
+	}
+	.white_key:hover{
+		background: none;
+	}
+	
+	.white_key.pressed{
+		background: rgb(255, 249, 172);
+	}
+	
+	.black_key:hover{
+		background: black;
+	}
+	
+	.black_key.pressed{
+		background: rgb(131, 128, 82);
+	}
+	.fa-github{
+		font-size: 25px;
+	}
+}
+
+@media all and (max-width: 570px) and (min-height: 800px){         /*Mobile vertical iphone x*/
+	.synthConverter{
+		height: 35px;
+		width: 70px;
+		margin: 0;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 2.5px;
+		margin-right: 2.5px;
+		font-size: 11px;
+	}
+	.cont-header{
+		font-size: 11px;
+	}
+	.slider-setting{
+		height: 48px;
+	}
+	.slider{
+		display: block !important;;
+		margin: auto !important;;
+		width: 80% !important;
+		height: 25px !important;; 
+	}
+	.slider-text{
+		display: block;
+		position: relative;
+		line-height: normal;
+		margin-top: 4px;
+		height: 15px;
+		font-size: 9px;
+		right: 0;
+	}
+	.btn-cont{
+		bottom: 25px;
+	}
+	.key{
+		font-size: 0;
+	}
+	.keyboard-cont{
+		height: 35%;
+	}
+	.controls-cont{
+		height: 65%;
+	}
+	.slider-cont{
+	height: 60%;
+	}
+	.instrument-cont{
+		height: 60%;
+	}
+}
+
+@media all and (max-height: 650px){
+	.title{
+		font-size: 24px;
+	}
+}
+
+
+/*css found online for range input (copy pasted)*/
+input[type=range] {
+	width: 100%;
+	margin: 3.95px 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+  }
+  input[type=range]:focus {
+	outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+	background: rgba(200, 200, 200, 0.1);
+	border: 0;
+	border-radius: 8.5px;
+	width: 100%;
+	height: 5.1px;
+	cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+	margin-top: -3.95px;
+	width: 5px;
+	height: 13px;
+	background: #dab900;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #d5d5d5;
+  }
+  input[type=range]::-moz-range-track {
+	background: rgba(200, 200, 200, 0.1);
+	border: 0;
+	border-radius: 8.5px;
+	width: 100%;
+	height: 5.1px;
+	cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+	width: 5px;
+	height: 13px;
+	background: #dab900;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+	background: transparent;
+	border-color: transparent;
+	border-width: 4.95px 0;
+	color: transparent;
+	width: 100%;
+	height: 5.1px;
+	cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+	background: #bbbbbb;
+	border: 0;
+	border-radius: 17px;
+  }
+  input[type=range]::-ms-fill-upper {
+	background: rgba(200, 200, 200, 0.1);
+	border: 0;
+	border-radius: 17px;
+  }
+  input[type=range]::-ms-thumb {
+	width: 5px;
+	height: 13px;
+	background: #dab900;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 0px;
+	/*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+	background: rgba(200, 200, 200, 0.1);
+  }
+  input[type=range]:focus::-ms-fill-upper {
+	background: #d5d5d5;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+	/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+	input[type=range] {
+	  margin: 0;
+	  /*Edge starts the margin from the thumb, not the track as other browsers do*/
+	}
+  }
+  
+  
